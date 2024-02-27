@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        
+            function getComputerChoice(){
+                options = ["rock", "paper", "scissors"]; 
+                let rando = Math.floor(Math.random()*3); 
+
+                //console.log("computers choice: " + options[rando]); 
+
+                return options[rando]; 
+
+                
+            }
+
+            function getPlayersChoice(){
+                let playersChoice = prompt("What is your choice? Rock, Paper, or Scissors?"); 
+                //console.log("Players choice: " + playersChoice); 
+                return playersChoice; 
+
+            }
+
+            let playerCounter = 0;
+                let computerCounter = 0;
+            function playRound(){
+
+                let playersChoice = getPlayersChoice().toLowerCase(); 
+                let computersChoice = getComputerChoice().toLowerCase(); 
+
+
+                // let condition1 = playersChoice == "rock" && computersChoice == "scissors"; 
+                // console.log(condition1); 
+                // let condition2 = playersChoice == "paper" && computersChoice == "rock"; 
+                // console.log(condition2); 
+                // let condition3 = playersChoice == "scissors" && computersChoice == "paper"; 
+                // console.log(condition3); 
+
+                
+                
+                
+
+                
+                
+
+                if ((playersChoice == "rock" && computersChoice == "scissors")){
+                    console.log("You win this round"); 
+                    playerCounter++; 
+                }
+                else if ((playersChoice == "paper" && computersChoice == "rock")){
+                    console.log("You win this round"); 
+                    playerCounter++; 
+
+                }
+                else if ((playersChoice == "scissors" && computersChoice == "paper")){
+                    console.log("You win this round"); 
+                    playerCounter++; 
+
+                }
+                else if (playersChoice == computersChoice){
+                    console.log("It's a tie"); 
+                }
+                else{
+                    console.log("computer wins this round!"); 
+                    computerCounter++; 
+
+                }
+                console.log(playerCounter); 
+                console.log(computerCounter); 
+
+                
+            }
+
+            function playGame(){
+
+                for(let i = 0; i < 5; i++) {
+                playRound(); 
+                
+            }
+
+            if (playerCounter>computerCounter){
+                console.log("You win the game "); 
+            }
+            else{
+                console.log("computer won the game"); 
+            }
+            
+
+
+            }
+
+            playGame(); 
+
+           
+
+            
+
+            
+
+           
+
+     
+        
+
+
+    </script>
+    
+</body>
+</html>
